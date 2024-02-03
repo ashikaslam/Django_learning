@@ -1,0 +1,29 @@
+
+{% extends "base.html" %}
+
+{% load first_tag %}
+
+
+
+
+{% block  title %}  home  {% endblock  %}
+{% block content %}  
+
+
+
+{{block.super}}
+
+
+<p>  do somethig for the world</p>
+
+<h1>author name is : {{author}} </h1
+<h1>author name is : {{author  | chnage_name:'change'}} </h1
+
+
+<br>
+
+
+{% show_cur %}
+
+
+{%endblock%}

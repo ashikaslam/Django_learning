@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block title %}show{% endblock %}
+
+
+{% block content %}
+{% load crispy_forms_tags %}
+<h1>HELLO WELLCOME TO SHOW BOOK</h1>
+<div>
+    {% if not data %} <h1>  OUR STORE IS EMPTY NOW </h1>
+    {% else %}<h1> SEE OUR BOOKS </h1>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">name</th>
+
+            {% comment %} <th scope="col">catagory</th>
+            <th scope="col">auth</th>
+            <th scope="col">actions</th> {% endcomment %}
+
+          </tr>
+        </thead>
+        <tbody>
+        {% for i in data %}
+          <tr>
+            <td>{{i.id}}</td>
+            <td><a href="{% url 'deteil' i.id %}"> {{i.name}} </a></td>
+
+            {% comment %} <td>{{i.cata}}</td>
+            <td>{{i.author}}</td>
+            <td><a type="button" class="btn btn-danger"   href="{% url 'delete'  i.id %}">delete</a>
+            <a type="button" class="btn btn-success"   href="{% url 'edit'  i.id %}">edit</a>
+            </td> {% endcomment %}
+            
+
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    {% endif %}
+</div>
+{% endblock %}

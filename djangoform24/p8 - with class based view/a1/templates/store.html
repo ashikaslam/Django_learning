@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}store{% endblock %}
+
+
+{% block content %}
+{% load crispy_forms_tags %}
+<h1>HELLO WELLCOME TO BOOK STORE</h1>
+
+<div>
+    <form method="post">
+      {% csrf_token %}
+      {{form | crispy}}
+
+      <input   class="btn btn-primary" type="submit" value="submit">
+    </form>
+
+</div>
+
+
+
+        {% endblock %}

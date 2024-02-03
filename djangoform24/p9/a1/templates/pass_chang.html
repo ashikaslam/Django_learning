@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block body %} 
+<h1>pass change Page</h1>
+    <form method="post" style="width: 50%; margin: auto" novalidate>
+    
+      {% csrf_token %}
+      {%if form.non_fiedl_errors%}
+      {%for er in form.non_fiedl_errors %}
+<p> {{er|crispy}} </p>
+      {%endfor%}
+
+
+      {%endif%}
+      
+{{form |crispy}}
+
+      <br />
+      <button class="btn btn-primary" type="submit">Submit</button>
+      <br/>
+     
+    </form>
+
+{% endblock %}
+

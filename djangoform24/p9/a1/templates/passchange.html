@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block body %} 
+<h1>change pass </h1>
+    <form method="post" style="width: 50%; margin: auto" novalidate>
+    {% if form.non_fiedl_errors %}
+    {% for er in form.non_fiedl_errors  %}
+    <p>{{er}}</p>
+    {% endfor %}
+    {% endif %}
+      {% csrf_token %}
+      {%if form.non_fiedl_errors%}
+      {%for er in form.non_fiedl_errors %}
+<p> {{er|crispy}} </p>
+      {%endfor%}
+
+
+      {%endif%}
+      
+{% comment %} {% for fied in form %}
+
+{{fied.label_tag}}
+{{fied}}
+{{fied.errors|striptags}}
+
+{% endfor %} {% endcomment %}
+
+{{form|crispy}}
+      <br />
+      <button class="btn btn-primary" type="submit">Submit</button>
+      <br/>
+     
+    </form>
+
+
+
+<a href="{% url 'lchange_pass2' %}">forgot password</a>
+
+{% endblock %}
+

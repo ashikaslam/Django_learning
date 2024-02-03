@@ -1,0 +1,9 @@
+
+
+1 . have 3 way to add link of file in the html 
+a) <img  src= {% static 'images/wellpaper.jpg' %}>
+b)  <img src="{% get_static_prefix %}static/images/wellpaper.jpg" alt="Wellpaper">
+c) this is a smart way when we have to use a link frequently we can go with it 
+    {% static 'images/wellpaper.jpg' %} as nauter
+    <img  src={{nauter}}>
+   {% with nauter=static 'images/wellpaper.jpg' %}
