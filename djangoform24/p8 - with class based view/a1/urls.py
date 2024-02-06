@@ -27,8 +27,10 @@ urlpatterns = [
     path('store/', views.Store_book.as_view(),name= 'store' ),
    # path('show/', views.show_book,name= 'show' ),
     path('show/', views.Show_book.as_view(),name= 'show' ),
-    path('del/<int:roll>', views.delete,name= 'delete' ),
-    path('edit/<int:roll>', views.edit,name= 'edit' ),
-     path('deteil/<int:id>/', views.detial_for_a_book.as_view(),name= 'deteil' ),
+   # path('del/<int:roll>', views.delete,name= 'delete' ),
+    path('del/<int:pk>', views.Delete.as_view(),name= 'delete' ),
+    #path('edit/<int:roll>', views.edit,name= 'edit' ),
+    path('edit/<int:pk>', views.Edit.as_view(),name= 'edit' ),
+    path('deteil/<int:id>/', views.detial_for_a_book.as_view(),name= 'deteil' ),
 
 ]

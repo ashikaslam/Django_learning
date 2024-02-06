@@ -1,8 +1,9 @@
 from typing import Any
+from django.http import HttpResponse
 from django.shortcuts import render,redirect
 from . import forms,models
 from django .views.generic import TemplateView,ListView,DetailView
-from django.views.generic.edit import FormView
+from django.views.generic.edit import FormView,CreateView,UpdateView,DeleteView
 from django.urls import reverse_lazy
 # Create your views here.
 
@@ -39,14 +40,21 @@ class Home(TemplateView):
 #     return render(request,'store.html',{'form':fom})
 
 
-class Store_book(FormView):
+# class Store_book(FormView):
+#     template_name = 'store.html'
+#     form_class = forms.Book_store_form
+#     success_url = reverse_lazy('show')
+
+#     def form_valid(self, form: Any) -> HttpResponse:
+#        print(form.cleaned_data)
+#        if form.is_valid():form.save()
+#        return redirect('store')
+
+
+class Store_book(CreateView):
     template_name = 'store.html'
     form_class = forms.Book_store_form
     success_url = reverse_lazy('show')
-
-
-
-
 
 
 
@@ -73,7 +81,7 @@ class Show_book(ListView):
         
     def get_context_data(self, **kwargs: Any) -> dict[str, Any]:
        context_data = super().get_context_data(**kwargs)
-       all_books = models.Book.objects.filter(cata='h').order_by('name')
+       all_books = models.Book.objects.order_by('name')
        context_data = {'data':all_books}
        return context_data
     
@@ -87,25 +95,40 @@ class detial_for_a_book(DetailView):
 
 
 
-def delete(request,roll):
-    book = models.Book.objects.get(pk = roll).delete()
-    return redirect('home') ## this takes a url not a template
+# def delete(request,roll):
+#     book = models.Book.objects.get(pk = roll).delete()
+#     return redirect('home') ## this takes a url not a template
     
 
+class Edit(UpdateView):
+    model= models.Book
+    template_name = 'edit.html'
+    form_class = forms.Book_store_form
+    success_url = reverse_lazy('show')
 
-def edit(request,roll):
+
+# def edit(request,roll):
       
-    book  = models.Book.objects.get(pk = roll)
-    if request.method == "POST":
-        print('hello1')
-        fom = forms.Book_store_form(request.POST,instance=book)
-        if fom.is_valid():
-            print(fom.cleaned_data)
-            fom.save(commit=True)
-            return redirect('home')
-    print('hello1')
-    fom = forms.Book_store_form(instance=book)
-    return render(request,'edit.html',{'form':fom})
+#     book  = models.Book.objects.get(pk = roll)
+#     if request.method == "POST":
+#         print('hello1')
+#         fom = forms.Book_store_form(request.POST,instance=book)
+#         if fom.is_valid():
+#             print(fom.cleaned_data)
+#             fom.save(commit=True)
+#             return redirect('home')
+#     print('hello1')
+#     fom = forms.Book_store_form(instance=book)
+#     return render(request,'edit.html',{'form':fom})
 
 
+class Edit(UpdateView):
+    model= models.Book
+    template_name = 'edit.html'
+    form_class = forms.Book_store_form
+    success_url = reverse_lazy('show')
 
+class Delete(DeleteView):
+    model= models.Book
+    template_name = "delecon.html"
+    success_url = reverse_lazy('show')
