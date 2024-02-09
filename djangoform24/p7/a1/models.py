@@ -2,6 +2,8 @@ from django.db import models
 
 # Create your models here.
 
+# abstract class
+
 class Comon_info(models.Model):
      name = models.CharField(max_length=20)
      addr = models.CharField(max_length=200)
@@ -25,7 +27,7 @@ class Teacher(Comon_info):
         return self.name
 
 
-
+# normal parrent child calss model
 
 class Employee(models.Model):
     name = models.CharField(max_length=20)
@@ -58,6 +60,11 @@ class Me(Friends):
     class Meta:
         proxy = True
         ordering = ['roll']
+
+
+
+
+
 
 # one to one
 

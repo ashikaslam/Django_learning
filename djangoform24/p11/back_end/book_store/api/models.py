@@ -4,13 +4,13 @@ from django.db import models
 
 
 class Book(models.Model):
-    CATEGORY = (
+    CATEGORY = [
     ('Mystery', 'Mystery'),
     ('Thriller', 'Thriller'),
     ('Sci-Fi', 'Sci-Fi'),
     ('Humor', 'Humor'),
     ('Horror', 'Horror'),
-    )
+    ]
     id = models.IntegerField(primary_key=True)
     book_name = models.CharField(max_length=30)
     author = models.CharField(max_length=30)
