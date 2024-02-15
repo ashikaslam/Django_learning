@@ -24,7 +24,7 @@ path('deposit/', views.DepositMoneyView.as_view(),name='diposit'),
 path('Withdraw/', views.WithdrawMoneyView.as_view(),name='Withdraw'),
 path('LoanRequest/', views.LoanRequestView.as_view(),name='LoanRequest'),
 path('TransactionReport/', views.TransactionReportView.as_view(),name='TransactionReport'),
-path('PayLoan/', views.PayLoanView.as_view(),name='PayLoan'),
+ path("loans/<int:loan_id>/", views.PayLoanView.as_view(), name="pay"),
 path('LoanList/', views.LoanListView.as_view(),name='LoanList'),
 
     
