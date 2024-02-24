@@ -5,7 +5,7 @@ from django.contrib.auth import login
 from django.urls import reverse_lazy
 from django.contrib.auth import authenticate,login,logout
 from django.contrib import messages
-from django.contrib.auth.views import LoginView
+from django.contrib.auth.views import LoginView,LogoutView
 from django.views import View
 # Create your views here.
 
@@ -76,6 +76,13 @@ def user_logout(request):
     return redirect('home')
 
 
+class UserLogoutView(LogoutView):
+    def get_next_page(self):
+        if self.request.user.is_authenticated:
+            logout(self.request)
+            return reverse_lazy('login')  # Assuming 'login' is the name of your login page
+        else:
+            return reverse_lazy('home')  # Redirect to home if the user is not authenticated
 
 # >>>>  profile>>>>>>>>>>>
 

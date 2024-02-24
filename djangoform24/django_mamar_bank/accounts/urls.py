@@ -22,7 +22,8 @@ urlpatterns = [
  # path('',views.register_user) # functons base register viwe
  # path('login/',views.user_login,name ='login') ,# functons base register viwe
   path('login/',views.MyLoginView.as_view(),name ='login') ,# functons base register viwe
-  path('logout/',views.user_logout,name ='logout') ,# functons base register viwe
+ # path('logout/',views.user_logout,name ='logout') ,# functons base register viwe
+  path('logout/',views.UserLogoutView.as_view(),name ='logout_xyz') ,# functons base register viwe
   path('profile/',views.show_profile.as_view(),name ='profile') ,
 path('', HomeView.as_view(),name='home' ) ,
   path('register/',views.User_register_FormView.as_view(),name='register' ) # class base register viwe
