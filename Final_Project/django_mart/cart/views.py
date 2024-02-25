@@ -9,7 +9,6 @@ def get_or_create_session(request):
         return request.session.session_key
 
 def cart(request):
-
     if request.user.is_authenticated: # loing hole
          print('inside 101')
          user = request.user
@@ -17,6 +16,7 @@ def cart(request):
          cart_items = CartItem.objects.filter(user=user)
          total_price = 0
          for i in cart_items:total_price+=i.sub_total()
+         total_price+= total_price*0.10
          total_price= int(total_price)
          if len(cart_items)==0:
               cart_items=[]
@@ -25,7 +25,6 @@ def cart(request):
     
     else:
         session_id = get_or_create_session(request)
-        print(session_id)
         cart_id = Cart.objects.filter(cart_id=session_id).exists() # it return a bool value
         if cart_id:
             my_card = Cart.objects.get(cart_id=session_id)
@@ -154,3 +153,23 @@ def remove_form_cart(request, product_id):
                 else: item.save()
 
      return redirect('cart')
+
+
+
+
+
+def make_payment(request):
+     user = request.user
+     if user.is_authenticated:
+         user = request.user
+         cart_items = CartItem.objects.filter(user=user)
+         total_price = 0
+         for i in cart_items:total_price+=i.sub_total()
+         total_price+= total_price*0.10
+         total_price= int(total_price)
+         return render(request,'cart/payment.html',{'all_products':cart_items,'total':total_price})
+
+     else:
+          return redirect('login')
+     
+     return render(request,'cart/payment.html')
