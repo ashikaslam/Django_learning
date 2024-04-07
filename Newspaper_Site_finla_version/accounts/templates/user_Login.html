@@ -24,6 +24,40 @@
       </div>
       <button type="submit" class="btn btn-primary btn-block">Log In</button>
     </form>
+
+    {% load socialaccount %}
+
+<a href="{% provider_login_url 'google' process=process scope=scope auth_params=auth_params %}">
+    Continue with Google
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   </div>
 
 </br>

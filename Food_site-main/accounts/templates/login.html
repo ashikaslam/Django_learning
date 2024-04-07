@@ -22,6 +22,7 @@
     {% endif %}
 
 <div class="card-body">
+
     <form method="post" class="needs-validation" novalidate  style="width: 50%; margin: auto;">
       {% csrf_token %}
       <div class="form-group">
@@ -40,9 +41,17 @@
       </div>
       <button type="submit" class="btn btn-primary btn-block">Log In</button>
     </form>
+    
   </div>
-  
 
+
+  <p> forgot my password  <a href="{% url 'password_reset' %}"> reste my pass </a>   </p>
 <p>if you do not have a accout then  <a href="{% url 'sign_up' %}"> singup</a>   </p>
 
+{% load socialaccount %}
+<a href="{% provider_login_url 'google' process=process scope=scope auth_params=auth_params %}">
+  Continue with Google
+</a>
+
   {% endblock %}
+  

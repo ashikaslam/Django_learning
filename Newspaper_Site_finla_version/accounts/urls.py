@@ -21,7 +21,7 @@ from .views import singup,sign_in,see_my_profie,edit_my_profile,change_my_passwo
 urlpatterns = [
      path('singup/', singup,name='singup'),
      path('sign_in/', sign_in,name='sign_in'),
-     path('see_my_profie/', see_my_profie,name='see_my_profie'),
+     path('profile/', see_my_profie,name='see_my_profie'),
      path('edit_my_profile/', edit_my_profile,name='edit_my_profile'),
      path('changepassword/', change_my_password,name='changepassword'),
      path('apply_as_editors/', apply_as_editors,name='apply_as_editors'),

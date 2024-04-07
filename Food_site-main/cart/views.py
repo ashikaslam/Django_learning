@@ -2,9 +2,11 @@ from django.shortcuts import render,redirect
 from store.models import Food
 from cart.models import Cart_item
 from django.contrib.auth.models import User
+
+from django.contrib.auth.decorators import login_required
 # Create your views here.
 
-
+@login_required
 def add_to_card(request,pk):
     if request.user.is_authenticated:
        user = request.user
@@ -24,7 +26,7 @@ def add_to_card(request,pk):
         return redirect('sign_up')
 
 
-
+@login_required
 def delete_item(request,pk):
 
     if request.user.is_authenticated:
@@ -42,7 +44,7 @@ def delete_item(request,pk):
     else:
         return redirect('sign_up')
 
-
+@login_required
 def decrease_item(request,pk):
      
      if request.user.is_authenticated:
@@ -63,7 +65,7 @@ def decrease_item(request,pk):
         return redirect('sign_up')
      
 
-
+@login_required
 def show_my_cart(request):
 
     if request.user.is_authenticated:

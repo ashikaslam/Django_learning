@@ -27,9 +27,11 @@ urlpatterns = [
     path('news_for_a_category/<int:pk>/', news_for_a_category,name='news_for_a_category'),
 
 
-
-    path('accounts/', include('accounts.urls')),
+path('accounts/', include('accounts.urls')),  # Include accounts-related URLs
+    path('accounts/', include('allauth.urls')),   # Include Django AllAuth URLs
     path('posts/', include('posts.urls')),
+
+     # path('social_auth/', include('allauth.urls')),
    
 ]
 

@@ -30,7 +30,7 @@ def give_reviews(request, pk=1):
 
 
 
-
+@login_required
 def edit_my_review(request,pk):# clicing the food 
 
       user = request.user
@@ -50,7 +50,7 @@ def edit_my_review(request,pk):# clicing the food
 
 
 
-
+@login_required
 def change_review(request,pk):
    
     current_review = Reviews.objects.get(pk=pk)

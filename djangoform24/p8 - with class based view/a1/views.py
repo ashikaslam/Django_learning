@@ -1,4 +1,5 @@
 from typing import Any
+from django.db.models.query import QuerySet
 from django.http import HttpResponse
 from django.shortcuts import render,redirect
 from . import forms,models
@@ -73,17 +74,20 @@ class Store_book(CreateView):
 class Show_book(ListView):
     model = models.Book
     template_name  ='show.html'
+    context_object_name='data'
+    def get_queryset(self) -> QuerySet[Any]:
+        return  models.Book.objects.filter( author ='aslam')
     # context_object_name = 'data'
     # ordering = ['-id']
     # def get_template_names(self):
     #     pass # with this funtion we can render several template according to  many stuffs
         
         
-    def get_context_data(self, **kwargs: Any) -> dict[str, Any]:
-       context_data = super().get_context_data(**kwargs)
-       all_books = models.Book.objects.order_by('name')
-       context_data = {'data':all_books}
-       return context_data
+    # def get_context_data(self, **kwargs: Any) -> dict[str, Any]:
+    #    context_data = super().get_context_data(**kwargs)
+    #    all_books = models.Book.objects.order_by('name')
+    #    context_data = {'data':all_books}
+    #    return context_data
     
 
 

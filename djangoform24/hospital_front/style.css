@@ -1,0 +1,149 @@
+
+
+body{
+    width: 100%;
+    margin: auto;
+}
+
+li{
+    list-style: none;
+}
+
+nav{
+    background-color: aqua;
+    margin-left: -300px;
+}
+
+
+
+.menu:hover{
+font-size: large;
+color: white;
+font-weight: bolder;
+font-style: italic;
+}
+
+.menu{
+
+    font-size: medium;
+    font-weight: bolder;
+}
+
+.banner{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: aquamarine;
+}
+
+.servives-container{
+    width: 1200px;
+    margin: auto;
+}
+
+
+.doc-card{
+    height: 350px;
+    width: 330px;
+    box-shadow: 4px gray;
+}
+
+/* .doc-card.img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+} */
+
+#serarch_a_doc{
+border-radius: 20px;
+}
+
+.doctors-container{
+    display: flex;
+}
+
+
+
+
+
+
+.no-data{
+
+display: none;
+
+
+}
+
+.loading{
+
+    display: none;  
+}
+
+.reviews_container{
+    margin-top: 50px;
+}
+
+.singel_reivew_card{
+
+    width: 300px;
+    height: 300px;
+    box-shadow: 4px 4px 8px gray;
+    border-radius: 5px;
+}
+
+.singel_reivew_card img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+}
+
+.details img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+}
+
+
+
+.user-detais-container{
+
+    height: 100vh;
+    width: 75%;
+    margin: auto;
+
+
+}
+
+
+
+
+.all-appointment-container{
+    width: 90%;
+    margin: auto;
+    height: 100vh;
+}
+
+
+
+
+
+
+.patient{
+    width: 350px;
+    height:400px;
+    box-shadow: 4px 4px 8px gray;
+    text-align: center;
+    background-color:gray;
+    color: white;
+    border-radius:10px;
+}
+
+.doctor{
+    width: 350px;
+    height:400px;
+    box-shadow: 4px 4px 8px gray;
+    text-align: center;
+    background-color:gray;
+    color: white;
+    border-radius:10px;
+}
