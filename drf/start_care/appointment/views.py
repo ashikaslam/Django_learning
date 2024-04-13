@@ -2,7 +2,7 @@ from rest_framework import viewsets
 from . import models
 from. import serializers
 class AppointmentViewSet(viewsets.ModelViewSet):
-    print('inside1')
+    
     """
     This viewset automatically provides `list` and `retrieve` actions.
     """
@@ -13,8 +13,8 @@ class AppointmentViewSet(viewsets.ModelViewSet):
     # custom query kortechi
     def get_queryset(self):
         queryset = super().get_queryset() # 7 no line ke niye aslam ba patient ke inherit korlam
-        print(self.request.query_params)
         patient_id = self.request.query_params.get('patient_id')
+
         if patient_id:
             queryset = queryset.filter(patient_id=patient_id)
         return queryset
