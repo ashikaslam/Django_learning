@@ -1,6 +1,7 @@
 from rest_framework import viewsets
 from . import models
 from. import serializers
+from rest_framework.permissions import IsAuthenticated
 class AppointmentViewSet(viewsets.ModelViewSet):
     
     """
@@ -8,7 +9,7 @@ class AppointmentViewSet(viewsets.ModelViewSet):
     """
     queryset = models.Appointment.objects.all()
     serializer_class = serializers.AppointmentSerializers
-
+    permission_classes = [IsAuthenticated]
 
     # custom query kortechi
     def get_queryset(self):

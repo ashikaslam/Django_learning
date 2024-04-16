@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 'rest_framework',
+   'rest_framework.authtoken',
     'service',
     'appointment',
     'doctor',
@@ -154,3 +155,17 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'ashikaslam1111@gmail.com'  # Replace 'your_gmail_address' with your actual Gmail address
 EMAIL_HOST_PASSWORD = 'aolw bvfc lriy eexv'  # Replace with your generated app password
 EMAIL_PORT = 587
+
+
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
+}
+
+
+# REST_FRAMEWORK = {
+#     'DEFAULT_PERMISSION_CLASSES': [
+#         'rest_framework.permissions.IsAuthenticated',
+#     ]
+# }
