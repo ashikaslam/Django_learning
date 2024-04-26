@@ -134,7 +134,7 @@ const handleRegistration = (event) => {
 
 const home_content = () => {
   const parent = document.getElementById("all_content");
-    fetch("http://127.0.0.1:8000/post_object/home/", {
+    fetch("http://127.0.0.1:8000/post_object/home?id=${5}", {
           method: "GET",
           headers: { "content-type": "application/json" },
          
@@ -174,7 +174,7 @@ const home_content = () => {
           const   villageOrrad= element.  villageOrrad;
           const  zip_code= element. zip_code;
 
-         
+         console.log(id);
           const div = document.createElement("div");
           div.innerHTML=`
           
@@ -184,9 +184,10 @@ const home_content = () => {
       </div>
       <div class="card-body p-3 p-xl-5">
           <h3 class="card-title h5" id="title">${title}</h3>
-          <p class="card-text" id="time">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <p class="card-text" id="address">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">details</a>
+          <h4 class="card-text" id="time"> time is : ${blood_need_time}</h4>
+          <p class="card-text" id="address">address : ${district},${district},${unionOrtown},${villageOrrad}</p>
+          </br>
+          <a class="btn btn-primary" onclick="post_detials(${id})">details</a>
       </div>
 
           
@@ -199,10 +200,28 @@ const home_content = () => {
           });
 
           })
-          .catch((err)=>{ });
+          .catch((err)=>{ 
+            console.log(err);
+          });
  };
 
  home_content();
+
+
+
+
+
+const post_detials = (id) => {
+
+  window.location.href=`postdetials.html?id=${id}`;
+ 
+
+
+};
+
+
+
+
 
 
 

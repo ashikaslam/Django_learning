@@ -70,7 +70,18 @@ class create_post(APIView):
 
 class RecentPost(APIView):
      def get(self, request):
-          print('hello aslam')
+          
+          id_value = request.GET.get('id')
+          print("the id is  >>>>", id_value)
+          if id_value:
+              id_value=int(id_value)
+              post = models.Post.objects.filter(id=id_value).exists()
+              if post:
+                   post = models.Post.objects.filter(id=id_value).values()
+                   return JsonResponse({'post': list(post)})
+              else :return JsonResponse({'error': "post not found"})
+
+
           all_post = models.Post.objects.filter(apply_availavle=True).values()
           return JsonResponse({'all_post': list(all_post)})
      

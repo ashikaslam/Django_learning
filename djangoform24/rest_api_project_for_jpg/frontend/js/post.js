@@ -53,12 +53,12 @@ const post_function = (event) => {
                 return res.json();
             })
             .then((data) => {
-                console.log('inside data ');
-                console.log(data);
-                if (data.status == 1) {
-                    console.log("hello inside");
-                    window.location.href = `otp.html?url=${data.activaton_url}`;
-                }
+                // console.log('inside data ');
+                // console.log(data);
+                // if (data.status == 1) {
+                //     console.log("hello inside");
+                //     window.location.href = `otp.html?url=${data.activaton_url}`;
+                // }
             })
             .catch((err) => {
                 console.log('inside err ');
@@ -67,4 +67,5 @@ const post_function = (event) => {
     } else {
         window.location.href = `login.html`;
     }
+    window.location.href=`post.html`;
 };
