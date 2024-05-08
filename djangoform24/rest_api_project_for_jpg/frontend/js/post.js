@@ -42,7 +42,7 @@ const post_function = (event) => {
         formData.append("image1", image1); // Append the image file
 
         // Make fetch request
-        fetch("http://127.0.0.1:8000/post_object/post/", {
+        fetch("https://food-site-03s7.onrender.com/post_object/post/", {
             method: "POST",
             headers: {
                 Authorization: `Bearer ${token}`,
@@ -63,9 +63,10 @@ const post_function = (event) => {
             .catch((err) => {
                 console.log('inside err ');
                 console.log(err);
+                window.location.href=`post.html`;
             });
     } else {
         window.location.href = `login.html`;
     }
-    window.location.href=`post.html`;
+    window.location.href=`index.html`;
 };

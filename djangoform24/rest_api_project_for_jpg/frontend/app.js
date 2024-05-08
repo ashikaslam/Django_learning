@@ -71,7 +71,7 @@ const handleRegistration = (event) => {
       }
    console.log(JSON.stringify(info));
 
-    fetch("http://127.0.0.1:8000/user_account/register/", {
+    fetch("https://food-site-03s7.onrender.com/user_account/register/", {
           method: "POST",
           headers: { "content-type": "application/json" },
           body: JSON.stringify(info),
@@ -134,7 +134,7 @@ const handleRegistration = (event) => {
 
 const home_content = () => {
   const parent = document.getElementById("all_content");
-    fetch("http://127.0.0.1:8000/post_object/home?id=${5}", {
+    fetch("https://food-site-03s7.onrender.com/post_object/home/", {
           method: "GET",
           headers: { "content-type": "application/json" },
          
@@ -180,7 +180,7 @@ const home_content = () => {
           
           
           <div class="ratio ratio-16x9">
-          <img src="${"http://127.0.0.1:8000/media/"+image1}" class="card-img-top" loading="lazy" alt="...">
+          <img src="${"https://food-site-03s7.onrender.com/media/"+image1}" class="card-img-top" loading="lazy" alt="...">
       </div>
       <div class="card-body p-3 p-xl-5">
           <h3 class="card-title h5" id="title">${title}</h3>

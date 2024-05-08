@@ -8,7 +8,8 @@ const profile_data = () => {
     if (token){
 
 
-        fetch("http://127.0.0.1:8000/user_account/my_profile/", {
+       // fetch("https://food-site-03s7.onrender.com/user_account/my_profile/", {
+        fetch("https://food-site-03s7.onrender.com/user_account/my_profile/", {
             method: "GET",
             headers: {
               Authorization: `Bearer ${token}`,
