@@ -10,6 +10,7 @@ const login_function = (event) => {
         password 
    }
 const final_url= "https://food-site-03s7.onrender.com/user_account/login/";
+//const final_url= "http://127.0.0.1:8000/user_account/login/";
    console.log(final_url);
 
    fetch(final_url, {
