@@ -103,6 +103,7 @@ const home_content = () => {
     })
 
     .then((data) => {
+      document.getElementById("loading_logo").style.display='none';
       console.log(data);
       const all_post = data.all_post;
       data.all_post.forEach((element) => {
