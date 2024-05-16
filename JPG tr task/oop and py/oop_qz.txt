@@ -70,5 +70,18 @@ b) way to protect data
 c) both
 ans is a
 
+9:
+
+which method we  use to represente  an object as a string?
+a) str()
+b) repr()
+c) format()
+d) display()
+
+ans is  a
+
+
+10:
+
 
 
