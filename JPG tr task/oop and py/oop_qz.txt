@@ -1,0 +1,74 @@
+
+
+
+1:
+
+why we use encapsulation in OOP?
+
+a) to organize code 
+b) to protect data from unauthorized access
+c) to optimize code execution speed
+
+ans is  b
+
+2:
+which one give the feature to get attribute of another class
+
+a)  Polymorphism
+b)Encapsulation
+c)Composition
+
+ans is can
+
+3:
+
+why we user self in Python class methods
+a)to refer the class
+b) to refer an instace of the class
+c) to refer the momory id of the class
+ans is b 
+
+4:
+
+can we get access of a private attribute inside the subclass
+
+a) yes
+b) no
+ans is a 
+
+
+
+5:
+
+
+which method in a Python class is automatically called when a new instance of the class is created?
+a) start()
+b) init()
+c) create()
+
+ans is b
+
+6:
+does python have distructor
+a) yes
+b) no
+ans is no
+
+7:
+does python have any syntax for protect data like c++
+
+a) yes
+b) no
+ ans is b
+
+
+8:
+
+what is Polymorphism?
+a) where mathods work defferenly in defferent class
+b) way to protect data
+c) both
+ans is a
+
+
+
