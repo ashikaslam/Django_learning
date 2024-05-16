@@ -1,0 +1,264 @@
+
+
+1:
+ does mysql have any specific syntax for full join?
+
+ a) yes 
+ b) no
+
+ ans is a
+
+ 2:
+ self join is something like 
+
+ a) full join 
+ b) cross join 
+ c) inner join
+ d) left join
+
+ ans is c
+
+ 3:
+
+ viwes is ?
+
+ a) table
+ b) virtual table
+ c) phycal table
+
+ 4:
+
+ if we need to store age of some students then which one will be the best option?
+
+ a) int
+ b) INT UNSINGED
+ b) INT SINGED
+
+ ans is b
+
+ 5:
+
+ having is used for ?
+
+ a) where
+ b) select
+c) order by
+d) group by
+ans is d
+
+
+6:
+
+by which we can get an idea about a tabel structure in data base
+
+a) fields
+b) total records
+c) size
+
+ans is 
+
+
+7:
+at lest how many fields we need to create a composite key?
+a) 1
+b)2
+c)3
+d)4
+
+ans is b
+
+8:
+
+select managerId
+from Employee 
+group by managerId
+having count(managerId)>=5;
+
+
+What will happen if we run this code?
+
+a)It will compile error because of due to syntax mistake 
+b)It will get run time error
+c)It will give us the  managerId which occurs at least 5 times
+d)None of above
+
+
+Ans is c
+
+
+9:
+
+Can we say in mysql inner join operation  is similar to set intersection in set theory ?
+
+a)Yes
+b)no
+
+
+Ans is a
+
+10:
+
+select *   from  employees
+order by salary
+limit 5 offset 4;
+
+a) it show us the 5th to 9th lowest salary
+b) it show us the 4th to 8th lowest salary
+c) it show us the 4th to 9th lowest salary
+
+tha ans is about
+
+
+
+11:
+
+which paratn is write?
+a)
+
+select
+from
+where
+group by
+order by
+having
+
+b)
+
+select
+from
+where
+group by
+having
+order by
+
+c)
+
+select
+from
+where
+having
+order by
+group by
+
+
+
+ans is b
+
+
+
+12:
+
+for common data which type of join will work:
+
+a) inner 
+b) left 
+c)right
+d) cross
+
+ans is about
+ 
+
+13:
+
+is any possibility that FK will be NULL
+
+a) yes
+b) no
+ans is a
+
+
+14:
+
+(left join) union (right join) makes?
+
+a) inner join
+b) full join
+c) cross join
+
+ans is base
+
+
+15:
+
+
+Create is a part of
+a)ddl 
+b) dml
+c)dcl
+ans is a
+
+
+16:
+
+
+update is a part of
+a)ddl 
+b) dml
+c)dcl
+ans is b
+
+
+17:
+
+
+what does Truncate do?
+
+a) delete the table
+b) delete all the data form the table 
+c) delete all the fields 
+
+ans is b 
+
+18:
+
+If we need to use a shorter name for a table then what we do?
+
+a) rename the table
+b) use  aliases
+
+ans is b
+
+19:
+
+The ALTER statement in SQL is used to
+
+a) recreate the data base
+b) recreate the table
+c)modify the structure of a table
+
+
+ans is c
+
+
+20:
+which statement  we use to perform some action automatically?
+a) having
+b) alter
+c) trigger
+
+ans is  c
+
+
+21:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
