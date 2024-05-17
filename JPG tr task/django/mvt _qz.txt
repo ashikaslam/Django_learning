@@ -1,0 +1,60 @@
+1:
+which patart is write?
+a) url->view->model
+b) url->model->view
+c) view->url->model
+ans a
+
+2:
+
+my_variable = user = User.objects.filter( email= email).exists()
+what is the type of my_variable 
+
+a) user_object
+b)bool
+c)str
+ans  b
+
+3:
+
+which one tells us what type of data collum contian in django model
+a)python data type
+b) field class
+c) filter
+ans b
+
+4:
+
+What is Django?
+
+a) a full stack webfremwork
+b) a backend webfremwork
+c) a frontend webfremwork
+
+ans is a
+
+5 :
+
+does djanog support multiple types of databases?
+
+a) yes
+b) no
+
+ans is b
+
+6:
+which file help our django project to communicte with webserver?
+
+a)wsgi.py
+b)urls.py
+c)setting.py
+ans is a
+
+7:
+where the Sessions data be stored ?
+a) server site
+b) browser
+c) none of them
+ ans is a
+
+ 

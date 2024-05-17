@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import  demo from ""
 
-function App() {
+
+function demo() {
   const [count, setCount] = useState(0)
 
   return (
@@ -11,7 +11,7 @@ function App() {
 
       
 
-      <h1>hello</h1>
+      <h1>hello  this is inside the demo</h1>
 
 
 
