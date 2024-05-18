@@ -57,4 +57,12 @@ b) browser
 c) none of them
  ans is a
 
+
+ 8:
+ how many type of signals in django
+ a)1
+ b)2
+ c)3
+
+ ans is c 
  

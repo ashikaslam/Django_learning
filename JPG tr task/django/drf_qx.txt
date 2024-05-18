@@ -1,0 +1,95 @@
+1:
+Serializer is liek 
+a)views
+b)form
+c)url
+
+ans b
+
+2:
+HTTPS is more secure then HTTP
+a)yes
+b)no
+ans a
+
+3:
+does django have any build-in support for api
+a)yes
+b)no 
+ans b 
+
+
+4:
+
+can cookies store more data then localStorage
+a)yes
+b)no
+
+ans b 
+
+5:
+
+what kind of data api can pass
+
+a)JSON
+b)XML
+c)HTML
+d)all
+ans is d 
+
+6)if we need to pass a image uising api front to backend then the file turn into 
+a)midea data 
+b)bainary data
+c)jeson data
+ans is ba
+
+7:
+
+what type of views we use for django_rest_fremwork?
+a)function
+b)class
+c)both
+ans is c 
+
+8:
+api work for ?
+a)serversite
+b)clintsite
+c)both 
+ans is a 
+
+9: if we need to manage data access then which will help use
+a)views
+b)permission
+c)both
+ans is b 
+
+10:
+how many main types fo authenticatons?
+
+a)1
+b)2
+c)3
+ans is c
+
+11:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
