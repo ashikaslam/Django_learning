@@ -72,7 +72,11 @@ b)2
 c)3
 ans is c
 
-11:
+11: what is token type of jwt access token?
+a)oauth 1
+b)oauth 2
+c Bearer
+ans c
 
 
 
