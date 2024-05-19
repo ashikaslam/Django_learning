@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'user_accounts_manager',
+    'manage_courses',
 
     'rest_framework_simplejwt.token_blacklist',
      'corsheaders',
@@ -153,11 +154,38 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 
+
+# rest fremwork
+
+
+REST_FRAMEWORK = {
+  
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    )
+   
+}
+
+
+
+# send email
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'ashikaslam1111@gmail.com'  # Replace 'your_gmail_address' with your actual Gmail address
+EMAIL_HOST_PASSWORD = 'dtlh naod xfcw qxpl'  # Replace with your generated app password
+EMAIL_PORT = 587
+
 ### jwt
+
+
+
+
+
 
 from datetime import timedelta
 SIMPLE_JWT = {
-    "ACCESS_TOKEN_LIFETIME": timedelta(minutes=1000),
+    "ACCESS_TOKEN_LIFETIME": timedelta(minutes=10),
     "REFRESH_TOKEN_LIFETIME": timedelta(days=90),
     "ROTATE_REFRESH_TOKENS": True,
     "BLACKLIST_AFTER_ROTATION": True,
