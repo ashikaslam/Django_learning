@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
      'user_accounts_manager',
-    # 'manage_courses',
+     'products_manager',
 
     'rest_framework_simplejwt.token_blacklist',
      'corsheaders',
