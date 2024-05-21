@@ -1,0 +1,49 @@
+
+ ---------- for crispy from -----------------
+
+"crispy_forms", 
+    "crispy_bootstrap5",
+
+
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+
+CRISPY_TEMPLATE_PACK = "bootstrap5"
+
+install>>>
+
+pip install django-crispy-forms
+ pip install crispy-bootstrap5
+
+
+load it inside html body >>>  {% load crispy_forms_tags %}
+
+
+
+
+
+
+INSTALLED_APPS = [
+    ...
+    'rest_framework',
+    'snippets',
+]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+----- super usr-----
+python manage.py createsuperuser

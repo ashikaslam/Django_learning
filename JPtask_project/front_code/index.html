@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Neighborhood Marketplace</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link href="css/list.css" rel="stylesheet" media="all">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">Marketplace</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+                
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="html_templates/login.html">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="html_templates/register.html">Register</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"  onclick="logout_fun ()">logout</a>
+                </li>
+
+                <li class="nav-item" style="margin-top: 10px; margin-left: 830px;">
+                    <h6 id="user_name_nav" onclick="handleLoginCheck()">Guest User</h6>
+
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+
+
+
+    <div class="container">
+
+        <div class="jumbotron">
+            <h1 class="display-4">Welcome to Neighborhood Marketplace!</h1>
+            <p class="lead">Buy, sell, and trade goods and services locally.</p>
+            <hr class="my-4">
+            <p>Browse listings or post your own.</p>
+            <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+        </div>
+
+
+        <div id="listingCarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+
+
+                <!-- Example carousel item start -->
+                <div class="carousel-item active" style="background-image: url('image/p1.jpeg'); background-size: cover;">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Listing Title 1</h5>
+                        <p>Short description of the listing...</p>
+                        <a href="listing_detail.html" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+                <!-- Example carousel item end -->
+
+
+
+                <!-- Repeat this block for each additional listing -->
+                <div class="carousel-item" style="background-image: url('image/p2.jpeg'); background-size: cover;">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Listing Title 2</h5>
+                        <p>Short description of the listing...</p>
+                        <a href="listing_detail.html" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+                <!-- Repeat block end -->
+
+
+
+            </div>
+            <a class="carousel-control-prev" href="#listingCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#listingCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+
+
+
+    </div>
+
+    <footer class="bg-light text-center text-lg-start">
+        <div class="container p-4">
+            <div class="row">
+                <!-- About Us -->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">About Us</h5>
+                    <p>
+                        Welcome to Neighborhood Marketplace! We are dedicated to helping you buy, sell, and trade goods and services locally.
+                    </p>
+                </div>
+                <!-- Quick Links -->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Quick Links</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li><a href="index.html" class="text-dark">Home</a></li>
+                        <li><a href="profile.html" class="text-dark">Profile</a></li>
+                        <li><a href="login.html" class="text-dark">Login</a></li>
+                        <li><a href="register.html" class="text-dark">Register</a></li>
+                    </ul>
+                </div>
+                <!-- Contact -->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Contact Us</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li><a href="#" class="text-dark">Email</a></li>
+                        <li><a href="#" class="text-dark">Phone</a></li>
+                        <li><a href="#" class="text-dark">Address</a></li>
+                    </ul>
+                </div>
+                <!-- Follow Us -->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Follow Us</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li><a href="#" class="text-dark">Facebook</a></li>
+                        <li><a href="#" class="text-dark">Twitter</a></li>
+                        <li><a href="#" class="text-dark">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="text-center p-3 bg-dark text-white">
+            &copy; 2024 Neighborhood Marketplace. All Rights Reserved.
+        </div>
+    </footer>
+    <script src="js/home.js"></script>
+    <script src="js/logout.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

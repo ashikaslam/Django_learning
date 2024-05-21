@@ -1,0 +1,25 @@
+PostgreSQL: set up for a project
+
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "mydatabase",
+        "USER": "mydatabaseuser",
+        "PASSWORD": "mypassword",
+        "HOST": "127.0.0.1",
+        "PORT": "5432",
+    }
+}
+
+
+postgres=# CREATE DATABASE social_market_place;
+postgres=# CREATE USER social_market_place_user WITH PASSWORD 'hello123';
+postgres=# \c newbd
+newdb=# CREATE SCHEMA newschma AUTHORIZATOIN user
+newdb=# ALTER ROLE user SET client_encoding TO 'utf8';
+newdb=# ALTER ROLE user SET default_transaction_isolation TO 'read committed';
+newdb=# ALTER ROLE user SET timezone TO 'UTC';
+
+
+
+

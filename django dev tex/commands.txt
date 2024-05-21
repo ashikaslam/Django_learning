@@ -1,0 +1,23 @@
+django>>>
+python manage.py runserver 0.0.0.0:80
+
+pip freeze > requirements.txt
+pip install -r requirements.txt
+
+git change>>>
+
+git add .
+git commit -m "Your commit message here"
+git push origin main
+
+
+deploy>>
+py manage.py collectstatic
+
+
+
+acive env>>>
+aslam\Scripts\activate
+deactivate
+
+pipenv shell
