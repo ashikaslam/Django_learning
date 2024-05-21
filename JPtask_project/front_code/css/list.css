@@ -1,7 +1,11 @@
 .carousel-item {
-    height: 500px;
+    height: 400px;
     background-size: cover;
     background-position: center;
+    border-radius: 10px;
+    margin-top: auto;
+    
+   
 }
 
 .carousel-caption {

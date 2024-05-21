@@ -39,60 +39,39 @@
 
 
 
-    <div class="container">
+   
 
-        <div class="jumbotron">
-            <h1 class="display-4">Welcome to Neighborhood Marketplace!</h1>
-            <p class="lead">Buy, sell, and trade goods and services locally.</p>
-            <hr class="my-4">
-            <p>Browse listings or post your own.</p>
-            <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+        
+
+    <div id="listingCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <!-- Dynamic carousel items will be added here -->
         </div>
-
-
-        <div id="listingCarousel" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-
-
-                <!-- Example carousel item start -->
-                <div class="carousel-item active" style="background-image: url('image/p1.jpeg'); background-size: cover;">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Listing Title 1</h5>
-                        <p>Short description of the listing...</p>
-                        <a href="listing_detail.html" class="btn btn-primary">View Details</a>
-                    </div>
-                </div>
-                <!-- Example carousel item end -->
-
-
-
-                <!-- Repeat this block for each additional listing -->
-                <div class="carousel-item" style="background-image: url('image/p2.jpeg'); background-size: cover;">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Listing Title 2</h5>
-                        <p>Short description of the listing...</p>
-                        <a href="listing_detail.html" class="btn btn-primary">View Details</a>
-                    </div>
-                </div>
-                <!-- Repeat block end -->
-
-
-
-            </div>
-            <a class="carousel-control-prev" href="#listingCarousel" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#listingCarousel" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
-
-
-
-
+        <a class="carousel-control-prev" href="#listingCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#listingCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
     </div>
+
+
+   <br>
+
+
+
+   <div class="jumbotron">
+    <h1 class="display-4">Welcome to Neighborhood Marketplace!</h1>
+    <p class="lead">Buy, sell, and trade goods and services locally.</p>
+    <hr class="my-4">
+    <p>Browse listings or post your own.</p>
+    <a class="btn btn-primary btn-lg" href="#" role="button" onclick="handleLoginCheck1()"  >Post to sell</a>
+</div>
+
+
+
 
     <footer class="bg-light text-center text-lg-start">
         <div class="container p-4">
@@ -142,6 +121,7 @@
 
     <script src="js/home.js"></script>
     <script src="js/logout.js"></script>
+    <script src="js/home_Prodecu_Loader.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

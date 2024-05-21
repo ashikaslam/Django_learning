@@ -89,3 +89,26 @@ function handleLoginCheck() {
     });
 }
 
+
+
+function handleLoginCheck1() {
+    checkLoginStatus(apiUrl, refreshUrl, localStorage.getItem('access'), localStorage.getItem('refresh')).then(isLoggedIn => {
+        if (isLoggedIn) {
+            window.location.href = 'html_templates/product_sel_post.html';
+        } else {
+            window.location.href = 'html_templates/login.html';
+        }
+    });
+}
+
+
+
+function handleLoginCheck2() {
+    checkLoginStatus(apiUrl, refreshUrl, localStorage.getItem('access'), localStorage.getItem('refresh')).then(isLoggedIn => {
+        if (isLoggedIn) {
+            window.location.href = './user_profile.html';
+        } else {
+            window.location.href = './login.html';
+        }
+    });
+}

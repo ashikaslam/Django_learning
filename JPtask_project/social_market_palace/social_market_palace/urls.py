@@ -37,6 +37,7 @@ path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     path('admin/', admin.site.urls),
    
     path('auth/', include('user_accounts_manager.urls')),
+    path('products/', include('products_manager.urls')),
    
    
 ]
