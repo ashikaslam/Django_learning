@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <style>
+        
+
+        .profile-container {
+            width: 50%;
+            max-width: 600px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .profile-header img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #007bff;
+        }
+
+        .profile-info {
+            margin-bottom: 20px;
+        }
+
+        .profile-info label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .profile-info p {
+            font-size: 16px;
+            margin: 0 0 15px 0;
+            color: #333;
+        }
+
+        .profile-actions {
+            text-align: center;
+        }
+
+        .profile-actions button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 0 10px;
+        }
+
+        .profile-actions button:hover {
+            background-color: #0056b3;
+        }
+
+        @media (max-width: 576px) {
+            .profile-container {
+                width: 90%;
+                padding: 15px;
+            }
+
+            .profile-actions button {
+                margin: 10px 0;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav style="background-color: #f8f9fa; padding: 20px; font-family: Arial, sans-serif;">
+        <a style="text-decoration: none; color: #4CAF50; font-weight: bold; margin-right: 20px; font-size: 40px; font-style: italic;  "  href="../index.html">Marketplace</a>
+         <ul style="list-style-type: none; margin: 0; padding: 0; display: inline;">
+             <li style="display: inline; margin-right: 10px;">
+                 <a style="text-decoration: none; color: #007bff ;  font-weight: bold; margin-right: 20px; font-size: 20px; font-style: italic;     " href="login.html" onmouseover="this.style.color='#ff9900'" onmouseout="this.style.color='#007bff'">Login</a>
+             </li>
+             <li style="display: inline; margin-right: 10px;">
+                 <a style="text-decoration: none; color: #007bff; ;  font-weight: bold; margin-right: 20px; font-size: 20px; font-style: italic; " href="register.html" onmouseover="this.style.color='#ff9900'" onmouseout="this.style.color='#007bff'">Register</a>
+             </li>
+ 
+             
+ 
+             <li style="display: inline;">
+ 
+                  <h6 id="user_name_nav"    onclick="handleLoginCheck2()"    style="margin-left:300px;  display: inline; margin-left: auto; cursor: pointer; color:  #007bff;   ;  font-weight: bold; margin-right: 20px; font-size: 20px; font-style: italic;" onmouseover="this.style.color='#ff9900'" onmouseout="this.style.color='#007bff'">Guest User</h6>
+             </li>
+ 
+         </ul>
+ 
+     </nav>
+
+
+
+
+
+
+
+    <div class="profile-container"  style="margin:auto">
+        <div class="profile-header">
+            <img id="profile-picture" src="default-pic.jpg" alt="Profile Picture">
+            <h2 id="user_name">User Name</h2>
+        </div>
+        <div class="profile-info">
+            <label for="email">Email:</label>
+            <p id="user_email">user@example.com</p>
+        </div>
+        <div class="profile-info">
+            <label for="phone">Phone Number:</label>
+            <p id="user_phone">*******</p>
+        </div>
+        <div class="profile-actions">
+            
+
+            <button style="background-color: #007bff; border: none; padding: 10px 20px; cursor: pointer; border-radius: 4px;">
+                <a href="user_Profile_update.html" style="color: white; text-decoration: none; display: block; height: 100%; width: 100%; text-align: center;">
+                    Edit Profile
+                </a>
+            </button>
+            <button style="background-color: #007bff; border: none; padding: 10px 20px; cursor: pointer; border-radius: 4px;">
+                <a href="change_Pass.html" style="color: white; text-decoration: none; display: block; height: 100%; width: 100%; text-align: center;">
+                    Change Password
+                </a>
+            </button>
+
+            
+        </div>
+    </div>
+<br>
+
+<a href="user_post.html"><button type="button" class="btn btn-warning" style=" width: 30%; height: 50px; margin-left:470px ;">MY Post</button></a>
+    
+
+    <script src="../js/home.js"></script>
+    <script src="../js/logout.js"></script>
+<script src="../js/profile.js"></script>
+
+</body>
+</html>

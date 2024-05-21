@@ -82,8 +82,6 @@ class RecentPost(APIView):
           print("the id is  >>>>", id_value)
           if id_value:
               id_value=int(id_value)
-
-
               
               post = models.Products.objects.filter(id=id_value).exists()
               if post:
@@ -91,7 +89,7 @@ class RecentPost(APIView):
                    return JsonResponse({'post': list(post)})
               else :return JsonResponse({'error': "post not found"})
 
-          all_post = models.Products.objects.filter(sell_availavle=True).values()
+          all_post = models.Products.objects.filter().values()
           return JsonResponse({'all_post': list(all_post)})
      
 
@@ -127,3 +125,48 @@ class delete_my_post(APIView):
         
 
           
+class update_sell_post(APIView):
+    authentication_classes=[JWTAuthentication,SessionAuthentication]
+    permission_classes = [IsAuthenticated]
+    serializer_class = serializers.ProductsSerializer
+    parser_classes = (MultiPartParser, FormParser)
+    def post(self, request):
+          try:
+               id_value = request.GET.get('id')
+               print("the id is  >>>>", id_value)
+               if id_value:
+                    id_value=int(id_value)
+                    if models.Products.objects.filter(id=id_value).exists():
+                         post = models.Products.objects.get(id=id_value)
+                         if post.user == request.user:
+                              serializer = self.serializer_class(data=request.data)
+                              if serializer.is_valid():
+                                   product_picture = request.FILES.get('product_picture')
+                                   if  product_picture:
+                                        post.product_picture= product_picture
+                                        post.save()
+                                   email  = serializer.validated_data['email']
+                                   if  product_picture:
+                                        post.email= email
+                                        post.save()
+                                   price  = serializer.validated_data['price']
+                                   title  = serializer.validated_data['title']
+                                   mobile_number  = serializer.validated_data['mobile_number']
+                                   description  = serializer.validated_data['description']
+                                   category  = serializer.validated_data['category']
+                                   condition  = serializer.validated_data['condition']
+                                   post.price=price
+                                   post.title=title
+                                   post.mobile_number=mobile_number
+                                   post.description=description
+                                   post.category=category
+                                   post.condition=condition
+                                   post.save()
+                                   return Response('done')
+                              return Response(serializer.errors)
+                    
+          except Exception as e:return Response("somethigh went wrong",status=status.HTTP_406_NOT_ACCEPTABLE)
+          return Response("somethigh went wrong",status=status.HTTP_406_NOT_ACCEPTABLE)
+  
+        
+
