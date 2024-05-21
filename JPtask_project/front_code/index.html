@@ -5,35 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Neighborhood Marketplace</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css">
     <link href="css/list.css" rel="stylesheet" media="all">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="index.html">Marketplace</a>
-        <div class="collapse navbar-collapse">
-            <ul class="navbar-nav mr-auto">
-                
-                
-                <li class="nav-item">
-                    <a class="nav-link" href="html_templates/login.html">Login</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="html_templates/register.html">Register</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link"  onclick="logout_fun ()">logout</a>
-                </li>
 
-                <li class="nav-item" style="margin-top: 10px; margin-left: 830px;">
-                    <h6 id="user_name_nav" onclick="handleLoginCheck()">Guest User</h6>
 
-                </li>
+    
+    <nav style="background-color: #f8f9fa; padding: 20px; font-family: Arial, sans-serif;">
+       <a style="text-decoration: none; color: #4CAF50; font-weight: bold; margin-right: 20px; font-size: 40px; font-style: italic;  "  href="index.html">Marketplace</a>
+        <ul style="list-style-type: none; margin: 0; padding: 0; display: inline;">
+            <li style="display: inline; margin-right: 10px;">
+                <a style="text-decoration: none; color: #007bff ;  font-weight: bold; margin-right: 20px; font-size: 20px; font-style: italic;     " href="html_templates/login.html" onmouseover="this.style.color='#ff9900'" onmouseout="this.style.color='#007bff'">Login</a>
+            </li>
+            <li style="display: inline; margin-right: 10px;">
+                <a style="text-decoration: none; color: #007bff; ;  font-weight: bold; margin-right: 20px; font-size: 20px; font-style: italic; " href="html_templates/register.html" onmouseover="this.style.color='#ff9900'" onmouseout="this.style.color='#007bff'">Register</a>
+            </li>
 
-            </ul>
-        </div>
+            <li style="display: inline;">
+                <a style="text-decoration: none; color: #007bff;  ;  font-weight: bold; margin-right: 20px; font-size: 20px; font-style: italic; cursor: pointer;" onclick="logout_fun()" onmouseover="this.style.color='#ff9900'" onmouseout="this.style.color='#007bff'">Logout</a>
+            </li>
+
+            <li style="display: inline;">
+
+                 <h6 id="user_name_nav"    onclick="handleLoginCheck()"    style="margin-left:300px;  display: inline; margin-left: auto; cursor: pointer; color:  #007bff;   ;  font-weight: bold; margin-right: 20px; font-size: 20px; font-style: italic;" onmouseover="this.style.color='#ff9900'" onmouseout="this.style.color='#007bff'">Guest User</h6>
+            </li>
+
+        </ul>
+
     </nav>
-
+    
+    
+    
 
 
 
@@ -136,6 +138,8 @@
             &copy; 2024 Neighborhood Marketplace. All Rights Reserved.
         </div>
     </footer>
+
+
     <script src="js/home.js"></script>
     <script src="js/logout.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

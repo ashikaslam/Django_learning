@@ -82,6 +82,35 @@
 
 
 
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">Marketplace</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+                
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="register.html">Register</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"  onclick="logout_fun ()">logout</a>
+                </li>
+
+                <li class="nav-item" style="margin-top: 10px; margin-left: 830px;">
+                    <h6 id="user_name_nav" onclick="handleLoginCheck()">Guest User</h6>
+
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+
+
+
+
 
     <div class="container" style="max-width: 500px; margin-top: 50px;">
         <h3>change your new password</h3>
@@ -109,7 +138,8 @@
     
 
 
-
+    <script src="../js/home.js"></script>
+    <script src="../js/logout.js"></script>
      <!-- Bootstrap JS and dependencies -->
      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>

@@ -5,13 +5,7 @@
     <title>Update Profile</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
-        body {
-            background-color: #f8f9fa;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
+        
         #profile_update_form_container {
             background: white;
             padding: 30px;
@@ -27,7 +21,43 @@
     </style>
 </head>
 <body>
-<div id="profile_update_form_container" class="container">
+
+
+    
+
+
+    <nav style="background-color: #f8f9fa; padding: 20px; font-family: Arial, sans-serif;">
+        <a style="text-decoration: none; color: #4CAF50; font-weight: bold; margin-right: 20px; font-size: 40px; font-style: italic;  "  href="../index.html">Marketplace</a>
+         <ul style="list-style-type: none; margin: 0; padding: 0; display: inline;">
+             <li style="display: inline; margin-right: 10px;">
+                 <a style="text-decoration: none; color: #007bff ;  font-weight: bold; margin-right: 20px; font-size: 20px; font-style: italic;     " href="login.html" onmouseover="this.style.color='#ff9900'" onmouseout="this.style.color='#007bff'">Login</a>
+             </li>
+             <li style="display: inline; margin-right: 10px;">
+                 <a style="text-decoration: none; color: #007bff; ;  font-weight: bold; margin-right: 20px; font-size: 20px; font-style: italic; " href="register.html" onmouseover="this.style.color='#ff9900'" onmouseout="this.style.color='#007bff'">Register</a>
+             </li>
+ 
+             <li style="display: inline;">
+                 <a style="text-decoration: none; color: #007bff;  ;  font-weight: bold; margin-right: 20px; font-size: 20px; font-style: italic; cursor: pointer;" onclick="logout_fun()" onmouseover="this.style.color='#ff9900'" onmouseout="this.style.color='#007bff'">Logout</a>
+             </li>
+ 
+             <li style="display: inline;">
+ 
+                  <h6 id="user_name_nav"    onclick="handleLoginCheck()"    style="margin-left:300px;  display: inline; margin-left: auto; cursor: pointer; color:  #007bff;   ;  font-weight: bold; margin-right: 20px; font-size: 20px; font-style: italic;" onmouseover="this.style.color='#ff9900'" onmouseout="this.style.color='#007bff'">Guest User</h6>
+             </li>
+ 
+         </ul>
+ 
+     </nav>
+
+
+
+
+
+
+
+
+
+<div id="profile_update_form_container" class="container"  style="margin:auto">
 
     <h1>Update Profile</h1>
     <form id="update-profile-form" enctype="multipart/form-data"  onsubmit="profile_upadate_data(event)">
@@ -56,7 +86,8 @@
 </div>
 
 
-
+<script src="../js/home.js"></script>
+<script src="../js/logout.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
