@@ -78,3 +78,17 @@ class Phone_for_forget_pass_Serializer(serializers.Serializer):
 class New_passSerializer(serializers.Serializer):
     new_pass = serializers.CharField(required=True, allow_blank=False,  style={'placeholder': 'Enter  new password'})
     phone = serializers.CharField(required=True, allow_blank=False,  style={'placeholder': 'Enter your phone number'})
+
+
+
+
+# ### user profile updata serializes
+
+
+
+
+class Profile_updat_Serializer(serializers.Serializer):
+    name = serializers.CharField(max_length=100, )
+    email = serializers.EmailField()
+    mobile_number = serializers.CharField(max_length=15)
+    profile_picture = serializers.ImageField(required=False)

@@ -30,6 +30,7 @@ const handleLogin = (event) => {
         localStorage.setItem("access", data.access);
         localStorage.setItem("email", data.email);
         localStorage.setItem("user_name", data.user_name);
+        localStorage.setItem("mobile_number", data.mobile_number);
         window.location.href = `../index.html`;
       } else {
         console.log("Login failed");

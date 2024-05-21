@@ -21,12 +21,13 @@ urlpatterns = [
 
    ## reset pass urls 
    path('reset_pass_pre/',views.reset_pass_pre.as_view(),name='reset_pass_pre'), # step1
-   path('check_use_login_pass_change/',views.Confirm_otp_pass_change.as_view(),name='Confirm_otp_pass_change'), # step2
-   path('profele_dta/',views.Final_password_set.as_view(),name='Final_password_set'), #step 3
+   path('Confirm_otp_pass_change/',views.Confirm_otp_pass_change.as_view(),name='Confirm_otp_pass_change'), # step2
+   path('Final_password_set/',views.Final_password_set.as_view(),name='Final_password_set'), #step 3
    ##
   
 
   # user profile
 path('profele_data/',views.profele_dta.as_view(),name='profele_data'),
+path('profele_update/',views.profele_update.as_view(),name='profele_update'),
 
 ]

@@ -13,6 +13,7 @@ from.import models
 from. import  serializers 
 
 # rest_fremwork 
+from rest_framework.parsers import MultiPartParser, FormParser
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework_simplejwt.authentication import JWTAuthentication
@@ -96,7 +97,7 @@ class Login_api_view(APIView):
             # here we got the athenticate user 
             Refresh=RefreshToken.for_user(user)
             login(request,user)
-            return Response({ "email":user.email,"access" :str( Refresh.access_token), 'refresh':str( Refresh),'user_id' : user.id,"status":1 ,'user_name':user.name},status=status.HTTP_200_OK)
+            return Response({ "email":user.email,"access" :str( Refresh.access_token), 'refresh':str( Refresh),'user_id' : user.id,"status":1 ,'user_name':user.name,'mobile_number':user.mobile_number},status=status.HTTP_200_OK)
         
         return Response(serializer.errors)
     
@@ -289,6 +290,8 @@ class Final_password_set(APIView):
                       return Response(status=status.HTTP_500_INTERNAL_SERVER_ERROR)
             else:
                  return Response({'error' : "Invalid phone number"},status.HTTP_400_BAD_REQUEST)
+            
+            return Response({'status' : 1},status.HTTP_200_OK)
         return Response(serializer.errors)
         
 
@@ -316,10 +319,9 @@ class check_use_login(APIView):
 
 # user profile_data
 
-class profele_dta(APIView):
+class profele_dta(APIView): ### get or see 
     authentication_classes=[JWTAuthentication,SessionAuthentication]
     permission_classes = [IsAuthenticated]
-    serializer_class = serializers.TakeOtpSerializer
     def get(self,request):
         user=request.user
         profile_picture_url = request.build_absolute_uri(user.profile_picture.url) if user.profile_picture else None
@@ -331,3 +333,55 @@ class profele_dta(APIView):
                          },
                          
                          status=status.HTTP_200_OK)
+    
+
+
+
+
+class profele_update(APIView): ### update 
+    authentication_classes=[JWTAuthentication,SessionAuthentication]
+    permission_classes = [IsAuthenticated]
+    serializer_class = serializers. Profile_updat_Serializer
+    parser_classes = (MultiPartParser, FormParser)
+    def post(self,request):
+        serializer  = self.serializer_class(data=request.data)
+        if  serializer.is_valid():
+             user=request.user
+             profile_picture = request.FILES.get('profile_picture')
+             email = serializer.validated_data['email']
+             mobile_number = serializer.validated_data['mobile_number']
+             name = serializer.validated_data['name']
+             try:
+                if(profile_picture):user.profile_picture=profile_picture
+                if(name):user.name=name
+                user.save()
+             except Exception as e:pass
+
+             try:
+                if mobile_number:
+                    if mobile_number==user.mobile_number:pass
+                    else:
+                        if not User.objects.filter(mobile_number=mobile_number).exists():
+                                user.mobile_number=mobile_number
+                                user.save()
+             except Exception as e:pass
+
+             try:
+                if email:
+                    if email==user.email:pass
+                    else:
+                        if not User.objects.filter(email=email).exists():
+                                user.email=email
+                                user.save()
+             except Exception as e:pass
+             return Response({"status":1},status=status.HTTP_200_OK)
+             
+
+
+        else:return Response(serializer.errors)
+             
+
+        
+    
+    
+
