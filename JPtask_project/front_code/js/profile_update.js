@@ -34,7 +34,7 @@ const profile_upadate_data = (event) => {
         formData.append('profile_picture', profilePicture);
     }
 
-    fetch('http://127.0.0.1:8000/auth/profele_update/', {
+    fetch('https://neighborhood-marketplace.onrender.com/auth/profele_update/', {
         method: 'POST',
         headers: {
             Authorization: `Bearer ${access}`,

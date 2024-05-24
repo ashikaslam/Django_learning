@@ -1,7 +1,7 @@
 const home_content = () => {
     const carouselInner = document.querySelector('.carousel-inner');
     
-    fetch("http://127.0.0.1:8000/products/RecentPost/", {
+    fetch("https://neighborhood-marketplace.onrender.com/products/RecentPost/", {
         method: "GET",
         headers: { "content-type": "application/json" },
     })
@@ -24,7 +24,7 @@ const home_content = () => {
             if (index === 0) {
                 carouselItem.classList.add('active');
             }
-            carouselItem.style.backgroundImage = `url('${"http://127.0.0.1:8000/media/"+image1}')`;
+            carouselItem.style.backgroundImage = `url('${"https://neighborhood-marketplace.onrender.com/media/"+image1}')`;
             carouselItem.style.backgroundSize = 'cover';
 
             carouselItem.innerHTML = `

@@ -28,7 +28,7 @@ if (productPicture) {
 
 
 
-    fetch('http://127.0.0.1:8000/products/create_sell_post/', {
+    fetch('https://neighborhood-marketplace.onrender.com/products/create_sell_post/', {
         method: 'POST',
         headers: {
             Authorization: `Bearer ${access}`,

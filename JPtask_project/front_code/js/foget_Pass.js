@@ -13,7 +13,7 @@ const handlereset_pass_1 = (event) => {
 
     console.log(JSON.stringify(info));
 
-    fetch('http://127.0.0.1:8000/auth/reset_pass_pre/', {
+    fetch('https://neighborhood-marketplace.onrender.com/auth/reset_pass_pre/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(info),
@@ -60,7 +60,7 @@ const handlereset_pass_2 = (event) => {
 
     console.log(JSON.stringify(info));
 
-    fetch('http://127.0.0.1:8000/auth/Confirm_otp_pass_change/', {
+    fetch('https://neighborhood-marketplace.onrender.com/auth/Confirm_otp_pass_change/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(info),
@@ -113,7 +113,7 @@ const handlereset_pass_3 = (event) => {
 
     console.log(JSON.stringify(info));
 
-    fetch('http://127.0.0.1:8000/auth/Final_password_set/', {
+    fetch('https://neighborhood-marketplace.onrender.com/auth/Final_password_set/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(info),

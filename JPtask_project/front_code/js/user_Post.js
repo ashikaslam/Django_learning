@@ -22,7 +22,7 @@
   const psot_of_user_sell = () => {
 
     const access = localStorage.getItem("access");
-    fetch('http://127.0.0.1:8000/products/my_post/', {
+    fetch('https://neighborhood-marketplace.onrender.com/products/my_post/', {
         method: 'GET',
         headers: {
             Authorization: `Bearer ${access}`,
@@ -44,7 +44,7 @@
     
           const cardHTML = `
             <div class="card">
-              <img src="${"http://127.0.0.1:8000/media/"+post.product_picture}" class="card-img-top" alt="Post Image">
+              <img src="${"https://neighborhood-marketplace.onrender.com/media/"+post.product_picture}" class="card-img-top" alt="Post Image">
               <div class="card-body">
                 <h5 class="card-title">${post.title}</h5>
                 <a href="update_Post.html?id=${post.id}" class="btn btn-primary">Update</a>
@@ -70,7 +70,7 @@ psot_of_user_sell();
 
 const delete_reques = (id) => {
   const access = localStorage.getItem("access");
-  fetch(`http://127.0.0.1:8000/products/delete_my_post/?id=${id}`, {
+  fetch(`https://neighborhood-marketplace.onrender.com/products/delete_my_post/?id=${id}`, {
       method: 'GET',
       headers: {
           Authorization: `Bearer ${access}`,

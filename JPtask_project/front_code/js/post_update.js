@@ -7,7 +7,7 @@
 const product_detail_fun = () => {
     const id = new URLSearchParams(window.location.search).get("id");
 
-    fetch(`http://127.0.0.1:8000/products/RecentPost/?id=${id}`, {
+    fetch(`https://neighborhood-marketplace.onrender.com/products/RecentPost/?id=${id}`, {
         method: "GET",
         headers: { "content-type": "application/json" },
     })
@@ -69,7 +69,7 @@ const post_upadate_data = (event) => {
 
 
 
-    fetch(`http://127.0.0.1:8000/products/update_sell_post/?id=${id}`, {
+    fetch(`https://neighborhood-marketplace.onrender.com/products/update_sell_post/?id=${id}`, {
         method: 'POST',
         headers: {
             Authorization: `Bearer ${access}`,

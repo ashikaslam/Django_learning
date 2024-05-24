@@ -1,7 +1,7 @@
 
 const handle_profile_see_final = () => {
     const access = localStorage.getItem("access");
-    fetch('http://127.0.0.1:8000/auth/profele_data/', {
+    fetch('https://neighborhood-marketplace.onrender.com/auth/profele_data/', {
         method: 'GET',
         headers: {
             Authorization: `Bearer ${access}`,

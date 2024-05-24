@@ -104,17 +104,20 @@ class my_post(APIView):
     
 
 
+
+
 class delete_my_post(APIView):
     authentication_classes=[JWTAuthentication,SessionAuthentication]
     permission_classes = [IsAuthenticated]
     def get(self, request):
           try:
                id_value = request.GET.get('id')
-               print("the id is  >>>>", id_value)
+               
                if id_value:
                     id_value=int(id_value)
-                    if models.Products.objects.filter(id=id).exists():
-                         post = models.Products.objects.get(id=id)
+                    print("the id is  >>>>", id_value)
+                    if models.Products.objects.filter(id=id_value).exists():
+                         post = models.Products.objects.get(id=id_value)
                          if post.user == request.user:
                               post.delete()
                               return Response(status=status.HTTP_200_OK)
@@ -123,6 +126,7 @@ class delete_my_post(APIView):
                         
                    
         
+
 
           
 class update_sell_post(APIView):

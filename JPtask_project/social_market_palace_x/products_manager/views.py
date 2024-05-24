@@ -77,6 +77,15 @@ class create_sell_post(APIView):
 
 
 class RecentPost(APIView):
+
+     # admin code
+     flag = False
+     if flag == True:
+       models.Products.objects.all().delete()
+
+
+
+
      def get(self, request):
           id_value = request.GET.get('id')
           print("the id is  >>>>", id_value)
@@ -113,8 +122,8 @@ class delete_my_post(APIView):
                print("the id is  >>>>", id_value)
                if id_value:
                     id_value=int(id_value)
-                    if models.Products.objects.filter(id=id).exists():
-                         post = models.Products.objects.get(id=id)
+                    if models.Products.objects.filter(id=id_value).exists():
+                         post = models.Products.objects.get(id=id_value)
                          if post.user == request.user:
                               post.delete()
                               return Response(status=status.HTTP_200_OK)

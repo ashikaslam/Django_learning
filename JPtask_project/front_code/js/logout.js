@@ -14,7 +14,7 @@ const logout_fun = () => {
     };
 
      console.log(JSON.stringify(info));
-    fetch('http://127.0.0.1:8000/auth/apiLogout/', {
+    fetch('https://neighborhood-marketplace.onrender.com/auth/apiLogout/', {
         method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(info),  

@@ -13,7 +13,7 @@ const handleLogin = (event) => {
 
   console.log(JSON.stringify(info));
 
-  fetch("http://127.0.0.1:8000/auth/login/", {
+  fetch("https://neighborhood-marketplace.onrender.com/auth/login/", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(info),

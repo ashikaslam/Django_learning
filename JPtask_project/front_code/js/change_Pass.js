@@ -21,7 +21,7 @@ const change_passowrd = (event) => {
 
 
     const access = localStorage.getItem("access");
-    fetch('http://127.0.0.1:8000/auth/chage_pass/', {
+    fetch('https://neighborhood-marketplace.onrender.com/auth/chage_pass/', {
         method: 'POST',
         headers: {
             Authorization: `Bearer ${access}`,

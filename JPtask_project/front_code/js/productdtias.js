@@ -4,7 +4,7 @@ const product_detail_fun = () => {
     const id = new URLSearchParams(window.location.search).get("id");
 
     const carouselInner = document.querySelector('.carousel-inner');
-    fetch(`http://127.0.0.1:8000/products/RecentPost/?id=${id}`,
+    fetch(`https://neighborhood-marketplace.onrender.com/products/RecentPost/?id=${id}`,
      {
         method: "GET",
         headers: { "content-type": "application/json" },
@@ -30,7 +30,7 @@ const product_detail_fun = () => {
             div.innerHTML=`
             
             <div class="card">
-            <img src="${"http://127.0.0.1:8000/media/"+image1}" class="card-img-top" alt="Listing Title"   style="width: 100%; height: 450px;">
+            <img src="${"https://neighborhood-marketplace.onrender.com/media/"+image1}" class="card-img-top" alt="Listing Title"   style="width: 100%; height: 450px;">
             <div class="card-body">
                 <h5 class="card-title">${title}</h5>
                 <p class="card-text">${description}</p>

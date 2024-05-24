@@ -64,8 +64,8 @@ async function checkLoginStatus(apiUrl, refreshUrl, accessToken, refreshToken) {
 }
 
 // Example usage
-const apiUrl = 'http://127.0.0.1:8000/auth/check_use_login/';
-const refreshUrl = 'http://127.0.0.1:8000/token/refresh/';
+const apiUrl = 'https://neighborhood-marketplace.onrender.com/auth/check_use_login/';
+const refreshUrl = 'https://neighborhood-marketplace.onrender.com/token/refresh/';
 const accessToken = localStorage.getItem('access');
 const refreshToken = localStorage.getItem('refresh');
 
