@@ -16,6 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
+###
+from django.urls import path, include, reverse_lazy
+from django.views.generic.base import RedirectView
+###
+
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
     TokenRefreshView,
@@ -38,6 +43,9 @@ path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
    
     path('auth/', include('user_accounts_manager.urls')),
     path('products/', include('products_manager.urls')),
+
+    # Creating new URLs that redirect to named URLs in user_accounts_manager
+     path('register/', RedirectView.as_view(url=reverse_lazy('register')), name='main_register'),
    
    
 ]
