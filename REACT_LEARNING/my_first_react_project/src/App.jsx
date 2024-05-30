@@ -19,8 +19,6 @@
 
 //import React from 'react';
 
-
-
 // import Header from "./components/Header";
 // import Footer from "./components/Footer";
 // import Hero from "./components/Hero";
@@ -30,7 +28,6 @@
 //import For_loop from "./components/For_loop";
 //import Conditional_rendering from "./components/Conditional_rendering";
 //import Props from "./components/Props";
-
 
 // const my_map = {
 // Name:"Aslam",
@@ -44,7 +41,6 @@
 // alert("hello world");
 // };
 
-
 // const fomr_submit =(events)=>
 // {
 
@@ -52,7 +48,6 @@
 //   alert("hello inside the fun")
 
 // };
-
 
 //import Hook_use_ref from "./components/Hook_use_ref";
 //import Hook_useRef_to_change_attribute from "./components/Hook_useRef_to_change_attribute";
@@ -63,17 +58,49 @@
 //import  Hook_useState_chnage_value_Live_time from "./components/Hook_useState_chnage_value_Live_time";
 //import  Hook_useState_handle_object from "./components/Hook_useState_handle_object";
 //import  Hook_useState_todo_app from "./components/Hook_useState_todo_app";
-import  Hook_useState_form_handle from "./components/Hook_useState_form_handle";
+//import  Hook_useState_form_handle from "./components/Hook_useState_form_handle";
+//import Hook_useEffect from "./components/Hook_useEffect";
+//import Hook_useEffect_apiFatch from "./components/Hook_useEffect_apiFatch";
+//import Hook_useEffect_apiFatch_async_awate from "./components/Hook_useEffect_apiFatch_async_awate";
 
 
 
+////////////////////////////
+// const App = () => {
+//   return (
+//     <div>
 
+//  <BrowserRouter>
+
+//  <Routes>
+// <Route  path="/" element={home_page}/>
+
+//  </Routes>
+//  </BrowserRouter>
+
+// <home_page>
+//     </div>
+//   );
+// };
+// export default App;
+
+
+
+import Product_page from "./components/product_page";
+import Not_found from "./components/not_found";
+import React from "react";
+import X from "./components/home_page";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 const App = () => {
   return (
     <div>
-     
-    < Hook_useState_form_handle/>
-
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<X/>}    />
+          <Route path="/products/:id" element={<Product_page/>} />
+          <Route path="*" element={<Not_found/>} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 };

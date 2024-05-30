@@ -1,0 +1,9 @@
+
+
+.is_active{
+    color: rgb(10, 231, 95);
+}
+
+.is_not_active{
+    color: red;
+}
