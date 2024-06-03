@@ -19,7 +19,7 @@
 
 //import React from 'react';
 
-// import Header from "./components/Header";
+ import Header from "./components/Header";
 // import Footer from "./components/Footer";
 // import Hero from "./components/Hero";
 // import ContactForm from "./components/ContactForm";
@@ -86,21 +86,36 @@
 
 
 
-import Product_page from "./components/product_page";
-import Not_found from "./components/not_found";
-import React from "react";
-import X from "./components/home_page";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+// import Product_page from "./components/product_page";
+// import Not_found from "./components/not_found";
+// import React from "react";
+// import X from "./components/home_page";
+// import { BrowserRouter, Route, Routes } from "react-router-dom";
+// const App = () => {
+//   return (
+//     <div>
+//       <BrowserRouter>
+//         <Routes>
+//           <Route path="/" element={<X/>}    />
+//           <Route path="/products/:id" element={<Product_page/>} />
+//           <Route path="*" element={<Not_found/>} />
+//         </Routes>
+//       </BrowserRouter>
+//     </div>
+//   );
+// };
+
+// export default App;
+
+
+import React from 'react';
+
 const App = () => {
   return (
     <div>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<X/>}    />
-          <Route path="/products/:id" element={<Product_page/>} />
-          <Route path="*" element={<Not_found/>} />
-        </Routes>
-      </BrowserRouter>
+      <Header/>
+
+
     </div>
   );
 };

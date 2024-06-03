@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dashboard</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.11.1/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body>
+    <div class="grid grid-cols-12">
+      <div id="sideber" class="bg-gray-900 col-span-2 min-h-screen p-4">
+        <ul class="space-y-2">
+          <li
+            class="btn px-8 py-4 bg-red-600 text-white w-full rounded-lg hover:bg-red-600/70 cursor-pointer"
+          >
+            <a href="dashboard.html">Profile</a>
+          </li>
+          <li
+            class="btn px-8 py-4 bg-red-600 text-white w-full rounded-lg hover:bg-red-600/70 cursor-pointer"
+          >
+            <a href="my-recipe.html">My Recipes</a>
+          </li>
+          <li
+            class="btn px-8 py-4 bg-red-600 text-white w-full rounded-lg hover:bg-red-600/70 cursor-pointer"
+          >
+            <a href="add-recipe.html">Add Recipes</a>
+          </li>
+          <li
+            class="btn px-8 py-4 bg-red-600 text-white w-full rounded-lg hover:bg-red-600/70 cursor-pointer"
+          >
+            <a href="index.html">Home</a>
+          </li>
+          <li
+            class="btn px-8 py-4 bg-red-600 text-white w-full rounded-lg hover:bg-red-600/70 cursor-pointer"
+          >
+            <a href="">Logout</a>
+          </li>
+        </ul>
+      </div>
+
+      <main class="col-span-10 w-full min-h-screen bg-yellow-50">
+        <div>
+          <h1 class="text-3xl font-bold text-center">My Recipes</h1>
+        </div>
+
+        <!-- items -->
+<!-- this is parrent  -->
+        <div class="p-4 flex gap-4 flex-wrap justify-center"  > 
+          <!-- calrd1 -->
+          <div class="card w-96 bg-base-100 shadow-xl">
+            <figure>
+              <img
+                src="https://img.freepik.com/free-photo/pizza-pizza-filled-with-tomatoes-salami-olives_140725-1200.jpg?t=st=1717227547~exp=1717231147~hmac=a304a1942215fa11590d758d5f79404da59b3ce8d50c66dac73295503b966a1a&w=740"
+                alt="food image"
+              />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title text-2xl font-medium">
+               pizza
+                <div class="badge badge-secondary">NEW</div>
+              </h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+                aliquam minima repudiandae fuga cumque natus. Quibusdam laborum
+                dignissimos a quaerat.
+              </p>
+            <h1 class="card-title text-2xl font-medium">Rating: 4/5</h1>
+            </div>
+            <button class="bg-red-600 p-2 rounded-lg mx-2">See details</button>
+          </div>
+ <!-- calrd2 -->
+          <div class="card w-96 bg-base-100 shadow-xl">
+            <figure>
+              <img
+                src="https://img.freepik.com/free-photo/pizza-pizza-filled-with-tomatoes-salami-olives_140725-1200.jpg?t=st=1717227547~exp=1717231147~hmac=a304a1942215fa11590d758d5f79404da59b3ce8d50c66dac73295503b966a1a&w=740"
+                alt="food image"
+              />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title text-2xl font-medium">
+               pizza
+                <div class="badge badge-secondary">NEW</div>
+              </h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+                aliquam minima repudiandae fuga cumque natus. Quibusdam laborum
+                dignissimos a quaerat.
+              </p>
+            <h1 class="card-title text-2xl font-medium">Rating: 4/5</h1>
+            </div>
+            <button class="bg-red-600 p-2 rounded-lg mx-2">See details</button>
+          </div>
+ <!-- calrd3 -->
+          <div class="card w-96 bg-base-100 shadow-xl">
+            <figure>
+              <img
+                src="https://img.freepik.com/free-photo/pizza-pizza-filled-with-tomatoes-salami-olives_140725-1200.jpg?t=st=1717227547~exp=1717231147~hmac=a304a1942215fa11590d758d5f79404da59b3ce8d50c66dac73295503b966a1a&w=740"
+                alt="food image"
+              />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title text-2xl font-medium">
+               pizza
+                <div class="badge badge-secondary">NEW</div>
+              </h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+                aliquam minima repudiandae fuga cumque natus. Quibusdam laborum
+                dignissimos a quaerat.
+              </p>
+            <h1 class="card-title text-2xl font-medium">Rating: 4/5</h1>
+            </div>
+            <button class="bg-red-600 p-2 rounded-lg mx-2">See details</button>
+          </div>
+
+<!-- calrd4 -->
+<div class="card w-96 bg-base-100 shadow-xl">
+  <figure>
+    <img
+      src="https://img.freepik.com/free-photo/pizza-pizza-filled-with-tomatoes-salami-olives_140725-1200.jpg?t=st=1717227547~exp=1717231147~hmac=a304a1942215fa11590d758d5f79404da59b3ce8d50c66dac73295503b966a1a&w=740"
+      alt="food image"
+    />
+  </figure>
+  <div class="card-body">
+    <h2 class="card-title text-2xl font-medium">
+     pizza
+      <div class="badge badge-secondary">NEW</div>
+    </h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+      aliquam minima repudiandae fuga cumque natus. Quibusdam laborum
+      dignissimos a quaerat.
+    </p>
+  <h1 class="card-title text-2xl font-medium">Rating: 4/5</h1>
+  </div>
+  <button class="bg-red-600 p-2 rounded-lg mx-2">See details</button>
+</div>
+<!-- calrd5 -->
+<div class="card w-96 bg-base-100 shadow-xl">
+  <figure>
+    <img
+      src="https://img.freepik.com/free-photo/pizza-pizza-filled-with-tomatoes-salami-olives_140725-1200.jpg?t=st=1717227547~exp=1717231147~hmac=a304a1942215fa11590d758d5f79404da59b3ce8d50c66dac73295503b966a1a&w=740"
+      alt="food image"
+    />
+  </figure>
+  <div class="card-body">
+    <h2 class="card-title text-2xl font-medium">
+     pizza
+      <div class="badge badge-secondary">NEW</div>
+    </h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+      aliquam minima repudiandae fuga cumque natus. Quibusdam laborum
+      dignissimos a quaerat.
+    </p>
+  <h1 class="card-title text-2xl font-medium">Rating: 4/5</h1>
+  </div>
+  <button class="bg-red-600 p-2 rounded-lg mx-2">See details</button>
+</div>
+<!-- calrd6 -->
+<div class="card w-96 bg-base-100 shadow-xl">
+  <figure>
+    <img
+      src="https://img.freepik.com/free-photo/pizza-pizza-filled-with-tomatoes-salami-olives_140725-1200.jpg?t=st=1717227547~exp=1717231147~hmac=a304a1942215fa11590d758d5f79404da59b3ce8d50c66dac73295503b966a1a&w=740"
+      alt="food image"
+    />
+  </figure>
+  <div class="card-body">
+    <h2 class="card-title text-2xl font-medium">
+     pizza
+      <div class="badge badge-secondary">NEW</div>
+    </h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+      aliquam minima repudiandae fuga cumque natus. Quibusdam laborum
+      dignissimos a quaerat.
+    </p>
+  <h1 class="card-title text-2xl font-medium">Rating: 4/5</h1>
+  </div>
+  <button class="bg-red-600 p-2 rounded-lg mx-2">See details</button>
+</div>
+<!-- calrd7 -->
+<div class="card w-96 bg-base-100 shadow-xl">
+  <figure>
+    <img
+      src="https://img.freepik.com/free-photo/pizza-pizza-filled-with-tomatoes-salami-olives_140725-1200.jpg?t=st=1717227547~exp=1717231147~hmac=a304a1942215fa11590d758d5f79404da59b3ce8d50c66dac73295503b966a1a&w=740"
+      alt="food image"
+    />
+  </figure>
+  <div class="card-body">
+    <h2 class="card-title text-2xl font-medium">
+     pizza
+      <div class="badge badge-secondary">NEW</div>
+    </h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+      aliquam minima repudiandae fuga cumque natus. Quibusdam laborum
+      dignissimos a quaerat.
+    </p>
+  <h1 class="card-title text-2xl font-medium">Rating: 4/5</h1>
+  </div>
+  <button class="bg-red-600 p-2 rounded-lg mx-2">See details</button>
+</div>
+<!-- calrd8 -->
+<div class="card w-96 bg-base-100 shadow-xl">
+  <figure>
+    <img
+      src="https://img.freepik.com/free-photo/pizza-pizza-filled-with-tomatoes-salami-olives_140725-1200.jpg?t=st=1717227547~exp=1717231147~hmac=a304a1942215fa11590d758d5f79404da59b3ce8d50c66dac73295503b966a1a&w=740"
+      alt="food image"
+    />
+  </figure>
+  <div class="card-body">
+    <h2 class="card-title text-2xl font-medium">
+     pizza
+      <div class="badge badge-secondary">NEW</div>
+    </h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+      aliquam minima repudiandae fuga cumque natus. Quibusdam laborum
+      dignissimos a quaerat.
+    </p>
+  <h1 class="card-title text-2xl font-medium">Rating: 4/5</h1>
+  </div>
+  <button class="bg-red-600 p-2 rounded-lg mx-2">See details</button>
+</div>
+
+
+
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

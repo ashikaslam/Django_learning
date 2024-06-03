@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login page</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+
+    <!-- header start -->
+    <header>
+
+        <nav class="naver">
+
+            <div class="left">
+                <h1 class="text-2xl font-bold text-red-600">My Recipe</h1>
+            </div>
+            <div class="right">
+                <ul class="nav_item">
+                    <li><a href="index.html" class="hover:text-red-600">Home</a></li>
+
+                    <li> <a href="login.html" class="hover:text-red-600">Login</a></li>
+                    <li> <a href="dashboard.html" class="hover:text-red-600">Dashboard</a></li>
+
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+
+    <!-- header end -->
+
+    <main>
+        <div class="flex justify-center items-center h-full w-full">
+          <form class="mt-24 border-2 border-black px-12 py-24 rounded-lg">
+            <h1 class="text-3xl font-bold text-center mb-8">Please Login</h1>
+            <div>
+              <label class="block mb-2" for="email">Your Email</label>
+              <input
+                class="border-2 border-black p-4 w-96 rounded-xl"
+                type="email"
+                name="email"
+                placeholder="Email"
+              />
+            </div>
+            <div class="mt-2">
+              <label class="block mb-2" for="email">Your Password</label>
+              <input
+                class="border-2 border-black p-4 w-96 rounded-xl"
+                type="password"
+                name="password"
+                placeholder="Password"
+              />
+            </div>
+            <div class="mt-6">
+              <input class="btn bg-red-600 p-4 text-white w-full rounded-lg" type="submit" name="submit" value="Login">
+            </div>
+          </form>
+        </div>
+      </main> 
+</body>
+
+</html>

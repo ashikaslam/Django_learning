@@ -1,0 +1,68 @@
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#nav{
+    width: 100%;
+    height: 60px;
+    justify-content: space-between;
+   
+}
+.banner{
+    background-image: url('https://neurosciencenews.com/files/2023/11/food-choices-processed-diet-neurosicence.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70vh;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* text move */
+
+
+.moving-text {
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.moving-text span {
+    display: inline-block;
+    padding-left: 100%;
+    animation: move 15s linear infinite;
+    animation-delay: -15s; /* Delay to start the animation */
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+
+/* carrosel */
+
+
+
+
+
+
+
